@@ -53,7 +53,7 @@ namespace :deploy do
   task :precompile_assets do
     run <<-CMD
       cd #{ current_path } &&
-      bundle exec rake assets:precompile RAILS_ENV=#{ rails_env }
+      bundle exec rake assets:precompile RAILS_ENV=#{rails_env}
     CMD
   end
 
