@@ -153,6 +153,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.18.2)
     polyglot (0.3.5)
     rack (1.5.5)
     rack-test (0.6.3)
@@ -256,6 +257,7 @@ DEPENDENCIES
   omniauth-facebook
   omniauth-twitter
   paperclip
+  pg
   rails (= 4.0.1)
   rails4-autocomplete
   rvm-capistrano
