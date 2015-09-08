@@ -23,6 +23,7 @@
                     <br>
                     <h4><%= @complaint.likes.count %> Sumados</h4>
                     <br>
+                    <div class="fb-share-button" data-href="<%= request.original_url %>" data-layout="button_count"></div>
                     <h3>Otros reclamos para <i> <%= @complaint.entity.name %></i></h3>
                     <div class="row">
 
