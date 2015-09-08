@@ -26,7 +26,7 @@ class Complaint < ActiveRecord::Base
 	
 	private 
 	def url_or_image
-	  if  (url.blank? or image.blank?)
+	  if  (url.blank? and image.blank?)
         errors.add(:base, "Debe incluir una imagen o un link con la publicidad.")
       end
 	end
