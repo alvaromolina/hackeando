@@ -18,7 +18,7 @@ class Complaint < ActiveRecord::Base
 		simple_format
 	end
 
-	#validate :url_or_image
+	validate :url_or_image
 
 	def exist_like(user)
 		Like.where(complaint_id: self.id, email: user.email, user_id: user.id).count > 0
