@@ -1,0 +1,48 @@
+
+
+<section id="registration" class="container">
+
+    <%= form_for(@complaint, :html => {:class => "center",  :multipart => true}) do |f| %>      
+
+  <fieldset class="registration-form col-md-offset-2 col-md-8">
+          <div class="form-group ">
+            <% if @complaint.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@complaint.errors.count, "error") %> prohibited this complaint from being saved:</h2>
+
+                <ul>
+                <% @complaint.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+          </div>
+          <div class="form-group">
+              <%= f.text_field :title, :placeholder=>"Coloca un titulo a tu denuncia", :class => "form-control input-lg" %>
+          </div>
+          <div class="form-group">
+              <%= f.text_area :detail, :placeholder=>"Coloca el contenido de tu denuncia", :class => "form-control input-lg" %>
+          </div>
+          <div class="form-group">
+              <%= f.autocomplete_field :entity_name, autocomplete_entity_name_complaints_path, :placeholder=>"Empresa u Organización", :class => "form-control input-lg" %>
+          </div>
+          <div class="form-group">
+              <br>
+              <label>Sube una imagen de la publicidad:</label>
+              <%= f.file_field :image, :placeholder=>"Imagen", :class => "form-control input-lg" %>
+          </div>
+          <div class="form-group">
+              <%= f.text_area :url, :placeholder=>"O copia aqui la dirección del video/image/publicación en internet", :class => "form-control input-lg" %>
+              <div id="preview">
+                
+              </div>
+          </div>
+          <div class="form-group"> 
+              <%= f.submit "Registrar", :class => "btn btn-success btn-lg btn-block"  %>
+          </div>
+      </fieldset>
+<% end %>
+
+
+</section><!--/#registration-->

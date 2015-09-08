@@ -1,0 +1,78 @@
+ <section id="blog" class="container">
+        <div class="row">
+            <aside class="col-sm-3 col-sm-push-9">  
+
+                <div class="widget categories">
+
+
+                    <hr>
+
+                    <% 
+
+                    if user_signed_in?
+                        user = current_user
+                    else
+                        user = guest_user
+                    end
+                    
+                    if @complaint.exist_like(user) %>
+                        <a class="btn btn-xl  btn-default active" >Sumado</a>
+                    <% else %>
+                        <a class="btn btn-warning btn-xl" href="/like/<%= @complaint.id %>">Me sumo</a>
+                    <% end  %>
+                    <br>
+                    <h4><%= @complaint.likes.count %> Sumados</h4>
+                    <br>
+                    <h3>Otros reclamos para <i> <%= @complaint.entity.name %></i></h3>
+                    <div class="row">
+
+                        <% @complaint.entity.complaints.each do |complaint| %>
+                           <div class="col-sm-12">
+                                <ul class="arrow">
+                                    <li><%= link_to complaint.title, complaint %></li>
+                                </ul>
+                            </div>                     
+                        <% end %>
+    
+                    </div>                     
+                </div><!--/.categories-->
+            </aside>        
+            <div class="col-sm-9 col-sm-pull-3">
+                <div class="blog">
+                    <div class="blog-item">
+
+                        <div class="blog-content">
+
+                        <h3><%= @complaint.title %></h3>
+
+                            <div class="col-sm-6">
+                            <% if  not @complaint.image.blank? %>
+                                <%= image_tag @complaint.image.url , :class => 'center img-responsive' %>
+                            <% else %>
+                                <%= image_tag "hamFINAL.png" , :class => 'center img-responsive' %>
+                            <%end %>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="lead"><%= @complaint.detail %> </p>
+
+                                <% if @complaint.url %>
+                                <p><strong>URL:</strong><%= @complaint.url_html %></p>
+                                <% end %>
+                                <div class="entry-meta">
+                                    <span><i class="icon-user"></i> <a href="#">Anonimo</a></span>
+                                    <span><i class="icon-calendar"></i>Sept 16th, 2012</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                        </div>
+                        <div id="comments">
+                                <div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="5"></div>
+                            </div><!--/#comments-->
+                        </div>
+
+                    </div><!--/.blog-item-->
+                </div>
+            </div><!--/.col-md-8-->
+        </div><!--/.row-->
+</section>

@@ -1,0 +1,142 @@
+<section id="main-slider" class="no-margin">
+<div class="carousel slide wet-asphalt">
+    <ol class="carousel-indicators">
+        <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#main-slider" data-slide-to="1"></li>
+        <li data-target="#main-slider" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active" style="background-image: url(<%= asset_path('feminis.jpg')%>)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="carousel-content centered">
+                            <h1 class="animation animated-item-1">Iniciativa ciudadana para reflexionar y actuar acerca del machismo, el sexismo y la violencia de género.  </h1>
+                            <h2 class="animation animated-item-2">¡Identifiquemos y denunciemos!</h2>
+                            <br>
+                            <a class="btn btn-warning btn-xl" href="/complaints/new">Public&aacute; tu denuncia!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.item-->
+        <div class="item" style="background-image: url(<%= asset_path('isla.jpg') %>)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="carousel-content center centered">
+                            <h2 class="boxed animation animated-item-1">Mas contenido y noticias</h2>
+                            <p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                            <br>
+                            <a class="btn btn-md animation animated-item-3" href="#">Aprende </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.item-->
+        <div class="item" style="background-image: url(<%= asset_path('mujer.jpg') %>)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="carousel-content centered">
+                            <h2 class="animation animated-item-1">Alguna campaña</h2>
+                            <p class="animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames</p>
+                            <a class="btn btn-md animation animated-item-3" href="#">Aprende</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 hidden-xs animation animated-item-4">
+                        <div class="centered">
+                            <div class="embed-container">
+                                <iframe src="//player.vimeo.com/video/69421653?title=0&amp;byline=0&amp;portrait=0&amp;color=a22c2f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.item-->
+    </div><!--/.carousel-inner-->
+</div><!--/.carousel-->
+<a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+    <i class="icon-angle-left"></i>
+</a>
+<a class="next hidden-xs" href="#main-slider" data-slide="next">
+    <i class="icon-angle-right"></i>
+</a>
+</section><!--/#main-slider-->
+
+<section id="services" class="emerald">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="media">
+                <div class="pull-left">
+                    <i class="icon-twitter icon-md"></i>
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading">Twitter </h3>
+                    <h4>Siguenos en <a href="https://twitter.com/hackalmachismo" target="_blank">@hackalmachismo</a> y realiza tus denuncias con el hashtag <strong>#HackeandoAlMachismo</strong></h4>
+                </div>
+            </div>
+        </div><!--/.col-md-4-->
+        <div class="col-md-6 col-sm-6">
+            <div class="media">
+                <div class="pull-left">
+                    <i class="icon-facebook icon-md"></i>
+                </div>
+                <div class="media-body">
+                    <h3 class="media-heading">Facebook</h3>
+                    <h4>Sigue nuestra <a href="">pagina</a> o ingresa al <a href="">grupo</a></h4>
+                </div>
+            </div>
+        </div><!--/.col-md-4-->
+    </div>
+</div>
+</section><!--/#services-->
+<section id="recent-works">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Ultimas denuncias</h3>
+            <div class="row">
+                <% Complaint.last(6).each do |complaint| %>
+                    <div class="col-xs-6">
+                        <div class="portfolio-item">
+                            <a href="/complaints/<%= complaint.id %>">
+                            <div class="item-inner">
+                                <%= image_tag complaint.image.url %>
+                                <h5><%= complaint.title %></h5>
+                            </div>           
+                            </a>
+                        </div><!--/.portfolio-item-->
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        <div class="col-md-6">
+        <h3>En las redes sociales</h3>
+
+        <script type="text/javascript" class="rebelmouse-embed-script" src="https://www.rebelmouse.com/static/js-build/embed/embed.js?site=hackeandoalmachismo&height=1500&flexible=1&dont_load_new_posts=1&more_button=1&show_rebelnav=1"></script>
+        </div>
+    </div><!--/.row-->
+</div>
+</section><!--/#recent-works-->
+<section id="testimonial" class="alizarin">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="center">
+                <h2>Con el apoyo de:</h2>
+            </div>
+            <div class="gap"></div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-3">
+                    <%= image_tag "labcivico.png", :width => "200", :class => "img-responsive img-thumbnail" %>
+                </div>
+                <div class="col-md-3">
+                    <%= image_tag "ciudadano.jpg", :width => "200", :class => "img-responsive img-thumbnail" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section><!--/#testimonial-->

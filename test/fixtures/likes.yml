@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  complaint_id: 
+  user_id: 
+  email_id: 
+
+two:
+  complaint_id: 
+  user_id: 
+  email_id: 
