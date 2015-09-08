@@ -4,7 +4,7 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
 set :application, "hackeando"
-set :repository,  "https://github.com/alvaromolina/heackeando.git"
+set :repository,  "https://github.com/alvaromolina/hackeando.git"
 
 set :scm, :git
 set :branch, "master"
