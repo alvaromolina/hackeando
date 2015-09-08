@@ -56,7 +56,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'capistrano', '~> 2.15.5'
-  gem  'rvm-capistrano'
+  gem  'rvm-capistrano', :require => false
   gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

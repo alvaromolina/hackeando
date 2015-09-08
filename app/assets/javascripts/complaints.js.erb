@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 
 	$("#complaint_url").change(function(){
-		$.post("http://localhost:3000/complaints/preview/", { url: $(this).val()}, function(data){
+		$.post("/complaints/preview/", { url: $(this).val()}, function(data){
 		 	$("#preview").html(data);
 		});
 	})
