@@ -103,6 +103,14 @@
                         <div class="portfolio-item">
                             <a href="/complaints/<%= complaint.id %>">
                             <div class="item-inner">
+
+                                <% if  not @complaint.image.blank? %>
+                                    <%= image_tag @complaint.image.url %>
+                                <% else %>
+                                    <%= image_tag "hamFINAL.png" %>
+                                <%end %>
+
+
                                 <%= image_tag complaint.image.url %>
                                 <h5><%= complaint.title %></h5>
                             </div>           
