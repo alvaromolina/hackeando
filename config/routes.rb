@@ -3,6 +3,11 @@ Rails.application.routes.draw do
   get 'like/:complaint_id' => 'likes#like'
 
 
+  get '/about' => 'home#about'
+  get '/contact' => 'home#contact'
+
+  get '/concepts' => 'home#concepts'
+
   resources :likes
   get 'images/new'
 
