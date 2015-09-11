@@ -24,13 +24,13 @@
 </head><!--/head-->
 <body>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.4&appId=847410998705560";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.4&appId=847410998705560";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 
     <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
@@ -70,7 +70,6 @@
                     -->
                     <li><a href="http://hackeandoalmachismo.tumblr.com/" target="_blank">Blog</a></li> 
                     <li><a href="/contact">Contacto</a></li>
-
                     <% if user_signed_in? %>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Perfil<i class="icon-angle-down"></i></a>
@@ -108,6 +107,7 @@
                 </div><!--/.col-md-3-->
 
                 <div class="col-md-4 col-sm-6">
+                    <!--
                     <h4>Noticias </h4>
                     <div>
                         <div class="media">
@@ -130,6 +130,7 @@
                             </div>
                         </div>
                     </div>  
+                    -->
                 </div><!--/.col-md-3-->
 
                 <div class="col-md-4 col-sm-6">
