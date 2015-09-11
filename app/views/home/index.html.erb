@@ -6,7 +6,23 @@
         <li data-target="#main-slider" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-        <div class="item active" style="background-image: url(<%= asset_path('feminis.jpg')%>)">
+
+        <div class="item active" style="background-image: url(<%= asset_path('jornada.jpg') %>)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="carousel-content center centered">
+                            <h2 class="boxed animation animated-item-1">Convocatoria Jornada Hacktivista</h2>
+                            <p class="boxed animation animated-item-2">
+                                <a href="http://www.scribd.com/doc/280254795/Convocatoria-Jornada-Hacktivista" target="_blank">Convocatoria</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/.item-->
+
+        <div class="item" style="background-image: url(<%= asset_path('feminis.jpg')%>)">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -20,20 +36,8 @@
                 </div>
             </div>
         </div><!--/.item-->
-        <div class="item" style="background-image: url(<%= asset_path('isla.jpg') %>)">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="carousel-content center centered">
-                            <h2 class="boxed animation animated-item-1">Mas contenido y noticias</h2>
-                            <p class="boxed animation animated-item-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                            <br>
-                            <a class="btn btn-md animation animated-item-3" href="#">Aprende </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!--/.item-->
+
+        <!--
         <div class="item" style="background-image: url(<%= asset_path('mujer.jpg') %>)">
             <div class="container">
                 <div class="row">
@@ -53,7 +57,8 @@
                     </div>
                 </div>
             </div>
-        </div><!--/.item-->
+        </div>
+        -->
     </div><!--/.carousel-inner-->
 </div><!--/.carousel-->
 <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
